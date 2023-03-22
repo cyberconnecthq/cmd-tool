@@ -12,7 +12,7 @@ var viperCmd = &cobra.Command{
 	Use:   "viper",
 	Short: "Convert a viper config string to gitops format",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(toGitopsFormat(input))
+		fmt.Println(ToSimpleAlfredResult(toGitopsFormat(input)))
 	},
 }
 

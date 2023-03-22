@@ -14,9 +14,10 @@ var checksumCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		checksum, err := toChecksumAddress(address)
 		if err != nil {
-			panic(err)
+			fmt.Println(ToSimpleAlfredResult("wrong address"))
+		} else {
+			fmt.Println(ToSimpleAlfredResult(checksum))
 		}
-		fmt.Println(checksum)
 	},
 }
 
